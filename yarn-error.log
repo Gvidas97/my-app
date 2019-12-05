@@ -1,0 +1,50 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js dev
+
+PATH: 
+  C:\Python27\;C:\Python27\Scripts;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Git\cmd;C:\Program Files (x86)\Yarn\bin\;C:\Ruby25-x64\bin;C:\Ruby26-x64\bin;C:\Users\-\AppData\Local\Microsoft\WindowsApps;C:\Users\-\AppData\Local\atom\bin;C:\Program Files\JetBrains\PyCharm 2019.2.1\bin;C:\Users\-\AppData\Roaming\npm;C:\Users\-\AppData\Local\Microsoft\WindowsApps;C:\Users\-\AppData\Local\GitHubDesktop\bin;C:\Users\-\AppData\Local\Yarn\bin
+
+Yarn version: 
+  1.19.1
+
+Node version: 
+  12.10.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  SyntaxError: C:\AntrojiUzduotis\my-app\package.json: Unexpected token } in JSON at position 409
+      at JSON.parse (<anonymous>)
+      at C:\Program Files (x86)\Yarn\lib\cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (C:\Program Files (x86)\Yarn\lib\cli.js:304:30)
+      at C:\Program Files (x86)\Yarn\lib\cli.js:315:13
+
+npm manifest: 
+  {
+      "name": "server",
+      "version": "1.0.0",
+      "description": "Paruošti komentarų formą su galimybe saugoti įrašus į tekstinį failą ir juos peržiūrėti.",
+      "main": "server.js",
+      "scripts": {
+          "start": "node server.js",
+          "client": "cd client && yarn start",
+          "server": "nodemon server.js",
+          "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
+      },
+      "author": "",
+      "license": "ISC",
+      "dependencies": {
+          "express": "^4.17.1"
+      },
+      "devDependencies": {
+          "concurrently": "^4.0.1"
+      }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
