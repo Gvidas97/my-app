@@ -1,14 +1,15 @@
 const express = require('express');
 const app = express();
 const fs = require('fs');
-
 const PORT = 3212;
 const FILE = './feedbacks.json';
 
 async function writeToFile(body) {
+    body.data = new Date().toISOString()
     const comments = await readFromFile();
     comments.push(body);
     const error = fs.writeFileSync(FILE, JSON.stringify(comments));
+    fs.writeFileSync('tekstinis.txt', JSON.stringify(comments));
     return error;
 }
 
